@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-size: 18px;
+  color: white;
+  background-color: #242424;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+main {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 650px;
+  flex: 4;
+}
+.column .row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.column .row .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: auto;
+  padding: 10px;
+}
+.column .row .item#location {
+  flex-direction: column;
+  font-size: 25px;
+}
+.column .row .item button:hover {
+  cursor: pointer;
+}
+.column .row #map {
+  height: 300px;
+  width: 300px;
+}
+.column .row #map .ol-attribution.ol-unselectable.ol-control.ol-uncollapsible {
+  display: none;
+}
+.column .row #map .ol-viewport {
+  border-radius: 10%;
+}
+.column:last-of-type {
+  flex: 3;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .column {
+    height: 400px;
+  }
+  .column .row #map-wrapper {
+    justify-content: center;
+  }
+  .column .row .item.next_day {
+    display: flex;
+    flex-direction: column;
+  }
+  .column .row:nth-of-type(3) .item {
+    padding: 0;
+    width: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

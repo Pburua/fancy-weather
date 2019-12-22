@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fancy Weather</title>
+    <link rel="stylesheet" href="dist/css/app.css">
+  </head>
+  <body>
+    <main>
+      <section class="column">
+
+        <div class="row">
+
+          <div class="item">
+            <button id="btn_change_bg">background</button>
+          </div>
+          <div class="item">
+            <select name="lang" id="languageSelect">
+              <option value="en" selected>English</option>
+              <option value="ru">Русский</option>
+              <option value="be">Беларуская</option>
+            </select>
+          </div>
+          <div class="item">
+            <button id="btn_switch_unit">°C/°F</button>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="item" id="location">
+            <div>town, country</div>
+            <div>date, time</div>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="item" id="temperature">temperature</div>
+          <div class="item" id="weather_icon">
+            <img src="" alt="current weather">
+          </div>
+          <div class="item" id="description">description</div>
+
+        </div>
+        <div class="row">
+
+          <div class="item next_day">
+            <span>temp</span>
+            <img src="" alt="next day weather 1">
+          </div>
+          <div class="item next_day">
+            <span>temp</span>
+            <img src="" alt="next day weather 2">
+          </div>
+          <div class="item next_day">
+            <span>temp</span>
+            <img src="" alt="next day weather 3">
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="column">
+
+        <div class="row">
+
+          <div class="item">
+            <input type="text" id="search_town_field" placeholder="Search town">
+          </div>
+          <div class="item">
+            <button id="btn_voice_search">voice</button>
+          </div>
+          <div class="item">
+            <button id="btn_search_for_town">search</button>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="item" id="map-wrapper">
+            <div id="map"></div>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="item" id="coordinates">coordinates</div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <script src="dist/js/app.js"></script>
+    <!--    <script src="src/js/script.js"></script>-->
+  </body>
+</html>
